@@ -1,0 +1,40 @@
+.logo {
+  height: 75px;
+  margin: 50px;
+  animation: spin infinite 20s linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tweet-wall {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tweet-wall_item {
+  width: 250px;
+  margin: 10px;
+}
+
+.tweet-wall_headline {
+  margin-top: 0;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.patterns-content {
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.patterns-container {
+  position: relative;
+}
