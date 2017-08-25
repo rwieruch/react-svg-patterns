@@ -42,6 +42,15 @@ class App extends Component {
   render() {
     return (
       <div>
+        <HeroPattern pttrn={'topography-pattern'}>
+          <div>
+            <h1 className="tweet-wall_headline">
+              What People Are Saying
+            </h1>
+            <TweetWall tweetsIds={TWEET_IDS} />
+          </div>
+        </HeroPattern>
+
         <BackgroundPattern pttrn={pattern}>
           <div>
             <h1 className="tweet-wall_headline">
@@ -56,7 +65,7 @@ class App extends Component {
 }
 
 // const BasicSvg = () =>
-//   <svg width="100" height="100">
+//   <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 //     <circle
 //       cx="50"
 //       cy="50"
@@ -86,6 +95,8 @@ class App extends Component {
 //       </g>
 //   </svg>
 
+// First Approach: svg-patterns
+
 const BackgroundPattern = ({ children, pttrn }) =>
   <div className="patterns-container">
     <svg className="patterns-content">
@@ -96,6 +107,15 @@ const BackgroundPattern = ({ children, pttrn }) =>
     {children}
 
   </div>
+
+// Second Approach: Hero Patterns
+
+const HeroPattern = ({ pttrn, children }) =>
+  <div className={pttrn}>
+    {children}
+  </div>
+
+// Use Case
 
 const TweetWall = ({ tweetsIds }) =>
   <div className="tweet-wall">
